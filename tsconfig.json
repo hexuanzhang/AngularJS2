@@ -1,0 +1,30 @@
+{
+    "files": [
+        // item -- {type/string, format/uri} 如果不指定具体的文件,则默认只编译除exclude外的其他目录及子目录下的文件, 若指定了具体的文件,则只编译保指定目录下的文件及include中指定的文件
+    ],
+    "exclude": [
+        // item -- {type/string, format/uri} 指定不需要编译的文件目录, 需要ts 2.0版本以上
+    ],
+    "include": [
+        // item -- {type/string, format/uri} 指定需要编译的文件目录, 需要ts 2.0版本以上
+    ],
+    "compileOnSave": false, // {boolean} -- 是否保存文件后重新编译
+    "compilerOptions": { //引导ts编译器如何编译.ts文件
+        "charset": "utf-8", // {string} -- 文件字符集
+        "declaration": false, // {boolean} -- 是否生产对应的d.ts文件
+        "declarationDir": "", // {boolean} -- 指定d.ts生产目录,需要ts 2.0版本以上
+        "diagnostics": false, // {boolean} -- 是否显示诊断信息
+        "emitBOM": false, // {boolean} -- 在输出文件开头生产 UTF-8 字节标记(BOM)
+        "inlineSourceMap": false, // {boolean} -- 生产单个 sourceMap 映射文件而不是独立的映射文件
+        "inlineSources": false, // {boolean} -- 若inlineSourceMap 设置为 true, 则生产的 sourceMap 映射文件放在源文件中
+        "listFiles": false, // {boolean} -- 输出部分编译文件的文件名
+        "locale": "", // {string} -- 设置显示错误信息的本地化语言, "zh-cn", "en-us"
+        "module": "", // {enum or string} -- 生产指定模块代码, "commonjs", "amd", "umd", "system", "es6", "es2015", "none"
+        "newLine": "", // {string} -- 指定行结尾符, "CRLF", "LF"
+        "noImplicitAny": false, // {boolean} -- 是否忽略带隐式 "any" 类型的表达式和声明的警告
+        "sourceMap": false, // {boolean} -- 是否生产 sourceMap 文件
+        "target": "es5", // {string} -- 指定 ECMAScript 版本 "es3"(默认), "es5", "es2015"
+        "experimentalDecorators": true, // {boolean} -- 是否支持 ES7 decorators
+        "removeComments": false, // {boolean} -- 是否移除注释
+    }
+}
