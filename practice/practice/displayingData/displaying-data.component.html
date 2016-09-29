@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<h2>我最喜欢的英雄是 {{myHero.name}}</h2>
+<p *ngIf="heroes.length == 0 ">暂无英雄数据</p>
+<dl *ngIf="heroes.length > 0">
+    <dt>英雄列表:</dt>
+    <dd *ngFor="let hero of heroes">
+        {{hero.name}}:{{hero.lines}}
+    </dd>
+</dl>
