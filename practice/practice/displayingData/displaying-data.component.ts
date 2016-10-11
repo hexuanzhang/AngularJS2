@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from "./common/hero";
-import { DisplayingDataService } from "./displayingData/displaying-data.service";
+import { Hero } from "../common/hero";
+import { DisplayingDataService } from "./displaying-data.service";
 
 @Component({
-    selector: "displaying-data",
+    selector: "app",
     templateUrl: "./practice/displayingData/displaying-data.component.html",
     styleUrls: ["./practice/displayingData/displaying-data.component.css"],
     providers:[
@@ -12,7 +12,7 @@ import { DisplayingDataService } from "./displayingData/displaying-data.service"
     ]
 })
 
-export class AppComponent implements OnInit{
+export class DisplayingData implements OnInit{
     myHero: Hero;
     heroes: Hero[];
 
@@ -25,3 +25,5 @@ export class AppComponent implements OnInit{
         this.myHero = this.heroes[0];
     }
 }
+
+
