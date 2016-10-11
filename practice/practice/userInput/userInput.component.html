@@ -1,0 +1,16 @@
+<h1>用户输入</h1>
+<h2>通过 $event 对象取得用户输入</h2>
+<input type="text" placeholder="请输入字符" (keyup)="eventKeyup($event)">
+<p>{{eventValue}}</p>
+<h2>从模板引用变量中获得用户输入</h2>
+<!-- trv(template reference variable 模板引用变量) -->
+<input type="text" placeholder="请输入字符" (keyup)="0" #trvInput>
+<p>{{trvInput.value}}</p>
+<input type="text" placeholder="输入字符" (keyup)="trvKeyup(trvInputS.value)" #trvInputS>
+<p>{{trvValue}}</p>
+<h2>按键事件过滤(通过 key.enter)</h2>
+<input type="text" placeholder="请输入字符" (keyup.enter)="keyEnter($event)">
+<p>{{enterValue}}</p>
+<h2>blur( 失去焦点 ) 事件</h2>
+<input type="text" placeholder="请输入字符" (blur)="blurEvent(blur.value)" #blur>
+<p>{{blurValue}}</p>
