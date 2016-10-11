@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Hero } from "./common/hero";
-import { DisplayingDataComponent } from "./displayingData/displaying-data.component";
+import { DisplayingDataService } from "./displayingData/displaying-data.service";
 
 @Component({
     selector: "displaying-data",
     templateUrl: "./practice/displayingData/displaying-data.component.html",
-    styleUrls: ["./practice/displayingData/displaying-data.component.css"]
+    styleUrls: ["./practice/displayingData/displaying-data.component.css"],
+    providers:[
+        DisplayingDataService
+    ]
 })
 
 export class AppComponent implements OnInit{
@@ -14,11 +17,11 @@ export class AppComponent implements OnInit{
     heroes: Hero[];
 
     constructor (
-        private displayingDataComponent: DisplayingDataComponent
+        private displayingDataService: DisplayingDataService
     ){}
 
     ngOnInit(): void{
-        this.myHero = this.displayingDataComponent.myHero;
-        this.heroes = this.displayingDataComponent.heroes;
+        this.heroes = this.displayingDataService.heroes;
+        this.myHero = this.heroes[0];
     }
 }

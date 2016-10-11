@@ -3,16 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 
-import { Hero } from "./common/hero";
-import { DisplayingDataComponent } from "./displayingData/displaying-data.component";
+import { DisplayingDataComponent } from "./displayingData/displaying-data.service";
 
 @NgModule({
     imports:      [ BrowserModule ],
     declarations: [
         AppComponent
-    ],
-    providers:[
-        DisplayingDataComponent
     ],
     bootstrap:    [ AppComponent ]
 })
